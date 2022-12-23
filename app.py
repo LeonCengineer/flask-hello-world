@@ -8,11 +8,10 @@ def hello_world():
 
 import tweepy
 
-auth = tweepy.OAuth1UserHandler(
-   hxlKCgcrMtFweITfuY2PVc0b6, YIoohvFDa1dsgWzl03pDtHyNXycmQZFTGDabiH9PHJTXu0sjDL, 18368941-6MRapL0PCELHw0RagwsyrgQntyoxUy91kjxBAHMQD, RkTOdUgFDvVzowFBgso65nmVoYPMASVFOb5PXCDZ278E
-)
-
+auth = tweepy.OAuthHandler(consumerKey, consumerSecret)
+auth.set_access_token(accessToken, accessTokenSecret)
 api = tweepy.API(auth)
+
 
 
 screen_name = "macroalf"
